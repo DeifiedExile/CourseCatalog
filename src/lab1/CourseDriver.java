@@ -12,6 +12,16 @@ import java.util.List;
 
 public class CourseDriver {
 
+    /*
+    Using an abstract class to build upon is useful as it allows me to create methods that are common to 
+    all subclasses and enforce their contents. This is useful as it prevents 
+    modification of those methods that may break other parts of the code.
+    
+    Using the Liskov Substitution Principle is useful as it allows me to store
+    objects in one place, be it a list or otherwise, based on their
+    parent class.
+    
+    */
     
     public static void main(String[] args) {
         List<Course> courses = new ArrayList<Course>();
