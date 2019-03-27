@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
  * @author your name goes here
  * @version 1.00
  */
-public class AdvancedJavaCourse {
+public class AdvancedJavaCourse implements ICourse, IPrerequisite {
 
     private String courseName;
     private String courseNumber;
@@ -20,11 +20,13 @@ public class AdvancedJavaCourse {
         this.setCourseNumber(courseNumber);
     }
 
+    @Override
     public String getCourseNumber() {
         return courseNumber;
     }
 
-    public final void setCourseNumber(String courseNumber) {
+    @Override
+    public void setCourseNumber(String courseNumber) {
         if (courseNumber == null || courseNumber.length() == 0) {
             JOptionPane.showMessageDialog(null,
                     "Error: courseNumber cannot be null of empty string");
@@ -33,10 +35,12 @@ public class AdvancedJavaCourse {
         this.courseNumber = courseNumber;
     }
 
+    @Override
     public double getCredits() {
         return credits;
     }
 
+    @Override
     public void setCredits(double credits) {
         if (credits < 0.5 || credits > 4.0) {
             JOptionPane.showMessageDialog(null,
@@ -46,10 +50,12 @@ public class AdvancedJavaCourse {
         this.credits = credits;
     }
 
+    @Override
     public String getPrerequisites() {
         return prerequisites;
     }
 
+    @Override
     public void setPrerequisites(String prerequisites) {
         if (prerequisites == null || prerequisites.length() == 0) {
             JOptionPane.showMessageDialog(null,
@@ -59,11 +65,13 @@ public class AdvancedJavaCourse {
         this.prerequisites = prerequisites;
     }
 
+    @Override
     public String getCourseName() {
         return courseName;
     }
 
-    public final void setCourseName(String courseName) {
+    @Override
+    public void setCourseName(String courseName) {
         if (courseName == null || courseName.length() == 0) {
             JOptionPane.showMessageDialog(null,
                     "Error: courseName cannot be null of empty string");

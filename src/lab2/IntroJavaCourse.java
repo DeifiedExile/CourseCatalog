@@ -6,7 +6,7 @@ package lab2;
  * @author your name goes here
  * @version 1.00
  */
-public class IntroJavaCourse {
+public class IntroJavaCourse implements ICourse, IPrerequisite {
 
     String courseName;
     private String courseNumber;
@@ -40,6 +40,16 @@ public class IntroJavaCourse {
 
     public void setPrerequisites(String prerequisites) {
         this.prerequisites = prerequisites;
+    }
+
+    @Override
+    public String getCourseName() {
+        return courseName;
+    }
+
+    @Override
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
     }
 
 }
